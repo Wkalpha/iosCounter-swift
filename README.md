@@ -24,6 +24,8 @@ Example:點擊 A 更改 Label 的文字為 Hello World
 
 最後我增加了 Alert 的功能，稍微增加用戶體驗
 
+日後有想到什麼需要補充的會直接加進來
+
 有任何問題可以 Mail 給我
 wkalphakao@gmail.com
 
