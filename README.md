@@ -1,10 +1,14 @@
 # iosCounter-swift
-你好，我是 iosCounter 的作者 Wkalpha
-當初會想設計這支 App
+
+你好，我是 iosCounter 的作者 Wkalpha，當初會想設計這支 App
+
 是因為看到了某位大大的學習筆記 https://ithelp.ithome.com.tw/articles/10209474
+
 我認為這對於剛接觸 swift 的新手來說較 Hello World 更能學習到更多的技巧
 
+
 開發環境
+
 Xcode Version 10.2 (10E125)
 
 swift 5
