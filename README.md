@@ -4,6 +4,10 @@
 是因為看到了某位大大的學習筆記 https://ithelp.ithome.com.tw/articles/10209474
 我認為這對於剛接觸 swift 的新手來說較 Hello World 更能學習到更多的技巧
 
+開發環境
+Xcode Version 10.2 (10E125)
+swift 5
+
 首先是 Main.storyboard，換句話說就是 App 的 UI，可以拉幾個簡單的 Label、Button、Item 元件，初步理解這些元件有什麼屬性、可以做哪些事情
 
 再來是如何讓 Main.storyboard 與 ViewController.swift 溝通
