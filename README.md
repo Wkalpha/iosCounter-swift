@@ -18,6 +18,8 @@ swift 5
 這篇 https://notcodingwilldie.blogspot.com/2018/10/cocoapods.html 教學很詳細的介紹如何使用該工具
 
 
+接下來大略說明專案內容包含了哪些部分
+
 首先是 Main.storyboard，換句話說就是 App 的 UI，可以拉幾個簡單的 Label、Button、Item 元件，初步理解這些元件有什麼屬性、可以做哪些事情
 
 再來是如何讓 Main.storyboard 與 ViewController.swift 溝通
