@@ -1,6 +1,10 @@
 # iosCounter-swift
 
-你好，我是 iosCounter 的開發者 Wkalpha，當初會設計這支 App
+你好，我是 iosCounter 的開發者 Wkalpha
+
+這個 App 主要提供給有計數需求的人
+
+當初會設計這支 App
 
 是因為看到了某篇學習筆記 https://ithelp.ithome.com.tw/articles/10209474
 
