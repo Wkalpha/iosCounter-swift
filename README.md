@@ -1,10 +1,10 @@
 # iosCounter-swift
 
-你好，我是 iosCounter 的作者 Wkalpha，當初會設計這支 App
+你好，我是 iosCounter 的開發者 Wkalpha，當初會設計這支 App
 
 是因為看到了某篇學習筆記 https://ithelp.ithome.com.tw/articles/10209474
 
-我認為這對於剛接觸 swift 的新手來說較 Hello World 更能學習到更多的技巧
+認為這對於剛接觸 swift 的新手來說較 Hello World 更能學習到更多的技巧
 
 
 開發環境
@@ -12,6 +12,11 @@
 Xcode Version 10.2 (10E125)
 
 swift 5
+
+另外使用 Cocoapod 管理工具來管理第三方套件
+
+這篇 https://notcodingwilldie.blogspot.com/2018/10/cocoapods.html 教學很詳細的介紹如何使用該工具
+
 
 首先是 Main.storyboard，換句話說就是 App 的 UI，可以拉幾個簡單的 Label、Button、Item 元件，初步理解這些元件有什麼屬性、可以做哪些事情
 
