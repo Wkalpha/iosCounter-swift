@@ -35,7 +35,7 @@ class ListResult: UITableViewController {
         
         // Using foreach to put element to resultArray
         for user  in (try? db?.prepare(countTime))!! {
-            resultArray.append("Total:\(user[total])")
+            resultArray.append("Date  : \(user[date])  Total : \(user[total])")
         }
     }
 
@@ -55,7 +55,7 @@ class ListResult: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         // Configure the cell...
-        cell.textLabel?.text = "Total:\(resultArray[indexPath.row])"
+        cell.textLabel?.text = resultArray[indexPath.row]
         return cell
     }
 

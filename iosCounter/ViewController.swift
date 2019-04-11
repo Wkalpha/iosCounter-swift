@@ -17,6 +17,35 @@ class ViewController: UIViewController {
     var timesOfFive = 0
     var timesOfTen = 0
     
+    // Drop table
+    @IBAction func dropTable(_ sender: UIButton) {
+        // Warning user
+        let controller = UIAlertController(title: "移除資料", message: "這個動作將會移除所有資料且不可復原", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let db = try? Connection("\(path)/Count.sqlite")
+            let countTime = Table("countTime")
+            do{
+                try db?.run(countTime.drop())
+                print("使用者已將資料表刪除...")
+            }catch{
+                print(error)
+            }
+            
+            // Hint
+            let controller = UIAlertController(title: "資料已清除！", message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Done", style: .default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+            
+        }
+        controller.addAction(okAction)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        controller.addAction(cancelAction)
+        present(controller, animated: true, completion: nil)
+       
+    }
+    
     // When click the show button
     // it will show the query result to the console
     @IBAction func showBtn(_ sender: UIButton) {
@@ -59,7 +88,7 @@ class ViewController: UIViewController {
         // Date to String
         let stringDate = dataFormatter.string(from: currentDate)
         
-        // Alert message
+        // Alert message before save data
         let controller = UIAlertController(title: "儲存並歸零", message: "清除點擊和總數並儲存？", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             do {
@@ -144,8 +173,8 @@ class ViewController: UIViewController {
             count.text = "\(totalNumber)"
             tenTimes.text = "\(timesOfTen)"
         case 2 :
-            let controller = UIAlertController(title: "清除", message: "是否清除所有資料？", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "是的", style: .default) { (_) in
+            let controller = UIAlertController(title: "重置", message: "是否重置畫面？", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
                 self.timesOfOne = 0
                 self.timesOfFive = 0
                 self.timesOfTen = 0
@@ -154,7 +183,7 @@ class ViewController: UIViewController {
                 self.oneTimes.text = "\(self.timesOfOne)"
                 self.fiveTimes.text = "\(self.timesOfFive)"
                 self.tenTimes.text = "\(self.timesOfTen)"
-                let controller = UIAlertController(title: "資料已清除！", message: "", preferredStyle: .alert)
+                let controller = UIAlertController(title: "重置完畢", message: "", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Done", style: .default, handler: nil)
                 controller.addAction(okAction)
                 self.present(controller, animated: true, completion: nil)
@@ -167,6 +196,7 @@ class ViewController: UIViewController {
             break
         }
     }
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -175,7 +205,5 @@ class ViewController: UIViewController {
         fiveTimes.text = "\(timesOfFive)"
         tenTimes.text = "\(timesOfTen)"
     }
-    
-    
 }
 
