@@ -17,6 +17,35 @@ class ViewController: UIViewController {
     var timesOfFive = 0
     var timesOfTen = 0
     
+    // When click the show button
+    // it will show the query result to the console
+    @IBAction func showBtn(_ sender: UIButton) {
+        do{
+            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let db = try? Connection("\(path)/Count.sqlite")
+            let countTime = Table("countTime")
+            let id = Expression<Int64>("id")
+            let one = Expression<Int>("one")
+            let five = Expression<Int>("five")
+            let ten = Expression<Int>("ten")
+            let total = Expression<Int>("total")
+            let date = Expression<String>("date")
+            try! db?.run(countTime.create(ifNotExists: true, block: { (table) in
+                table.column(id, primaryKey: true)
+                table.column(one)
+                table.column(five)
+                table.column(ten)
+                table.column(total)
+                table.column(date)
+            }))
+            for user  in (try? db?.prepare(countTime))!! {
+                print("id: \(user[id]), One Time Tap: \(user[one]), Five Time Tap: \(user[five]), Ten Time Tap: \(user[ten]), Total: \(user[total]), Date: \(user[date])")
+            }
+        }catch{
+            print(error)
+        }
+    }
+    
     // When click the save button
     // it will ask you to save records to database and reset all records or not
     @IBAction func saveBtn(_ sender: UIButton) {

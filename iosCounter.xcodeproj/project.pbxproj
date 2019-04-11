@@ -12,6 +12,7 @@
 		2C675CB9225CD7B700605263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C675CB7225CD7B700605263 /* Main.storyboard */; };
 		2C675CBB225CD7B800605263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C675CBA225CD7B800605263 /* Assets.xcassets */; };
 		2C675CBE225CD7B800605263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C675CBC225CD7B800605263 /* LaunchScreen.storyboard */; };
+		2CEEC050225F2C3000D85819 /* ListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEC04F225F2C3000D85819 /* ListResult.swift */; };
 		C0A2AC37534A396A61380489 /* Pods_iosCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3502B96A19CBE11D523C394F /* Pods_iosCounter.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2C675CBA225CD7B800605263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C675CBD225CD7B800605263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C675CBF225CD7B800605263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEEC04F225F2C3000D85819 /* ListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResult.swift; sourceTree = "<group>"; };
 		3502B96A19CBE11D523C394F /* Pods_iosCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FA22BE33A7AF6CCC7134E7 /* Pods-iosCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosCounter.release.xcconfig"; path = "Target Support Files/Pods-iosCounter/Pods-iosCounter.release.xcconfig"; sourceTree = "<group>"; };
 		8E9C9B705F540C5C7D343C0D /* Pods-iosCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosCounter.debug.xcconfig"; path = "Target Support Files/Pods-iosCounter/Pods-iosCounter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		2C675CB2225CD7B700605263 /* iosCounter */ = {
 			isa = PBXGroup;
 			children = (
+				2CEEC04F225F2C3000D85819 /* ListResult.swift */,
 				2C675CB3225CD7B700605263 /* AppDelegate.swift */,
 				2C675CB5225CD7B700605263 /* ViewController.swift */,
 				2C675CB7225CD7B700605263 /* Main.storyboard */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C675CB6225CD7B700605263 /* ViewController.swift in Sources */,
+				2CEEC050225F2C3000D85819 /* ListResult.swift in Sources */,
 				2C675CB4225CD7B700605263 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
