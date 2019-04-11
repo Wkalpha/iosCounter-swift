@@ -36,7 +36,12 @@ Example:點擊 A 更改 Label 的文字為 Hello World
 
 日後有想到什麼需要補充的會直接加進來
 
-有任何問題可以 Mail 給我
+2019/04/11
+
+為了不讓 UI 在不同裝置上亂七八糟的呈現
+增加了 CONTRAINTS
+
+歡迎透過 Email 來與我討論任何問題
 wkalphakao@gmail.com
 
 願你學習 Swift 順利
