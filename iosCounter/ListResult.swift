@@ -2,7 +2,7 @@
 //  ListResult.swift
 //  iosCounter
 //
-//  Created by 高俊瑋 on 2019/4/11.
+//  Created by Wkalpha on 2019/4/11.
 //  Copyright © 2019 wkalpha. All rights reserved.
 //
 
